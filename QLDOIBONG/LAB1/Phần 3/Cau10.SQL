@@ -1,3 +1,4 @@
+--Liệt kê các cầu thủ đang thi đấu trong các câu lạc bộ có thứ hạng ở vòng 3 năm 2009 lớn hơn 6 hoặc nhỏ hơn 3.
 SELECT 
     CAUTHU.HOTEN, 
     CAUTHU.VITRI, 
