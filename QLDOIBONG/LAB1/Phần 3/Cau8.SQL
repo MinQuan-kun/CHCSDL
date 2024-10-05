@@ -1,3 +1,4 @@
+--Cho biết tên huấn luyện viên đang nắm giữ một vị trí trong một câu lạc bộ mà chưa có số điện thoại.
 SELECT 
     HLV.TENHLV
 FROM 
