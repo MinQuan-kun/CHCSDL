@@ -1,3 +1,4 @@
+--Cho biết mã số, họ tên, ngày sinh, địa chỉ và vị trí của các cầu thủ thuộc đội bóng “SHB Đà Nẵng” có quốc tịch “Bra-xin”.
 SELECT 
     CT.MACT, 
     CT.HOTEN, 
