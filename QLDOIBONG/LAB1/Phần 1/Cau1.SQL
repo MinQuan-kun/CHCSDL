@@ -9,5 +9,5 @@ FROM
     JOIN QUOCGIA QG ON CT.MAQG = QG.MAQG
     JOIN CAULACBO CLB ON CT.MACLB = CLB.MACLB
 WHERE 
-    CLB.MACLB = 'SHB Đà Nẵng' 
-    AND QG.TENQG = 'Bra-xin';
+    CLB.TENCLB = N'SHB Đà Nẵng' 
+    AND QG.TENQG = N'Bra-xin';
