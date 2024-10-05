@@ -1,3 +1,4 @@
+--Cho biết kết quả (MATRAN, NGAYTD, TENSAN, TENCLB1, TENCLB2, KETQUA) các trận đấu thuộc vòng 3 của mùa bóng năm 2009.
 SELECT 
     TD.MATRAN, 
     TD.NGAYTD, 
