@@ -1,0 +1,4 @@
+-- 11.1. Backup và Restore:
+-- Thực hiện sao lưu (backup) và khôi phục (restore) CSDL theo 2 cách:
+--  Dùng công cụ
+--  Dùng SQL Script
