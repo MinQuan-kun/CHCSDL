@@ -1,0 +1,6 @@
+-- Fuction 1:
+-- a) Xây dựng hàm có tên là TongSoTrai. Hàm này sẽ trả về mã cầu thủ, tổng số trái bóng của
+-- cầu thủ đó đá thủng lưới đối phương (ở đây SOTRAI trong bảng THAMGIA không tính đến
+-- cầu thủ đá phản lưới nhà).
+-- b) Áp dụng hàm trên để tìm cầu thủ là vua phá lưới.Thông tin hiển thị thông tin gồm có Tên
+-- cầu thủ và tổng số trái đã ghi được.
