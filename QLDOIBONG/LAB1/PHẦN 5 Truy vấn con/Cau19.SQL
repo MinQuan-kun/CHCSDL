@@ -1,3 +1,11 @@
---Cho biết tên câu lạc bộ, tên tỉnh mà CLB đang đóng có hiệu số bàng thắng bại cao nhất năm 2009.
-SELECT CAULACBO.TENCLB
-    
+--Cho biết tên câu lạc bộ, tên tỉnh mà CLB đang đóng có hiệu số bàn thắng bại cao nhất năm 2009.
+SELECT TOP 1 CLB.TENCLB,
+	T.TENTINH,
+	(SUM(BXH.THANG) - SUM(BXH.THUA)) AS "HIEUSOBANGTHANG"
+FROM CAULACBO CLB
+JOIN TINH T ON T.MATINH = CLB.MATINH
+JOIN BANGXH BXH ON BXH.MACLB = CLB.MACLB
+WHERE BXH.NAM = 2009
+GROUP BY CLB.TENCLB,
+	T.TENTINH
+ORDER BY HIEUSOBANGTHANG DESC
