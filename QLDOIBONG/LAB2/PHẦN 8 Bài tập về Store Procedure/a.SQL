@@ -11,6 +11,7 @@ END
 EXEC XINCHAO  N'Minh Quân'
 --DROP PROC XINCHAO
 
+--a)Cho thực thi và in giá trị của các tham số này để kiểm tra.
 --36. Nhập vào 2 số @s1,@s2. In ra câu ‘tổng là : @tg ‘ với @tg =@s1+@s2.
 USE QLBongDa
 GO
