@@ -1,4 +1,4 @@
--- 33.Cho biết tên huấn luyện viên đang nắm giữ một vị trí trong một câu lạc bộ mà
+-- 33. Cho biết tên huấn luyện viên đang nắm giữ một vị trí trong một câu lạc bộ mà
 -- chưa có số điện thoại.
 CREATE VIEW HLVKHONGCOSDT AS
 SELECT HLV.TENHLV
@@ -6,5 +6,5 @@ FROM HUANLUYENVIEN HLV
 JOIN HLV_CLB HLVCLB ON HLVCLB.MAHLV = HLV.MAHLV
 WHERE HLVCLB.VAITRO IS NOT NULL
 AND HLV.DIENTHOAI IS NULL
-
 SELECT * FROM HLVKHONGCOSDT 
+-- DROP VIEW HLVKHONGCOSDT

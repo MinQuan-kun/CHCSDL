@@ -1,4 +1,4 @@
--- 29.Cho biết mã huấn luyện viên, họ tên, ngày sinh, địa chỉ, vai trò và tên CLB
+-- 29. Cho biết mã huấn luyện viên, họ tên, ngày sinh, địa chỉ, vai trò và tên CLB
 -- đang làm việc của các huấn luyện viên có quốc tịch “Việt Nam”.
 USE QLBongDa
 GO
@@ -14,6 +14,6 @@ JOIN HLV_CLB HLVCLB ON HLVCLB.MAHLV = HLV.MAHLV
 JOIN CAULACBO CLB ON CLB.MACLB = HLVCLB.MACLB
 JOIN QUOCGIA QG ON QG.MAQG = HLV.MAQG
 WHERE QG.TENQG LIKE N'Việt Nam'
-
 GO
 SELECT * FROM  HLVVN
+-- DROP VIEW HLVVN

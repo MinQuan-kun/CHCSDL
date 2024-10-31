@@ -1,4 +1,4 @@
--- 27.Cho biết mã số, họ tên, ngày sinh, địa chỉ và vị trí của các cầu thủ thuộc đội
+-- 27. Cho biết mã số, họ tên, ngày sinh, địa chỉ và vị trí của các cầu thủ thuộc đội
 -- bóng “SHB Đà Nẵng” có quốc tịch “Bra-xin”.
 USE QLBongDa
 GO
@@ -15,8 +15,7 @@ JOIN CAUTHU CT ON CT.MACLB = CLB.MACLB
 JOIN QUOCGIA QG ON QG.MAQG = CT.MAQG
 WHERE CLB.TENCLB LIKE N'SHB Đà Nẵng'
 AND QG.TENQG LIKE N'Bra-xin'
-
 GO
 SELECT *
 FROM [SHB Đà Nẵng]
-
+--DROP VIEW [SHB Đà Nẵng]

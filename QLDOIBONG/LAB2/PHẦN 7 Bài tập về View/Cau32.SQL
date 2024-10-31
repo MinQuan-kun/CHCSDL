@@ -1,4 +1,4 @@
--- 32.Cho biết tên câu lạc bộ, tên tỉnh mà CLB đang đóng nằm ở vị trí cao nhất của
+-- 32. Cho biết tên câu lạc bộ, tên tỉnh mà CLB đang đóng nằm ở vị trí cao nhất của
 -- bảng xếp hạng của vòng 3, năm 2009.
 CREATE VIEW TOP1CLB AS
 SELECT TOP 1
@@ -23,7 +23,6 @@ JOIN CAULACBO CLB ON CLB.MACLB = BXH.MACLB
 JOIN TINH T ON T.MATINH = CLB.MATINH
 WHERE BXH.VONG = 3 AND BXH.NAM = 2009 AND BXH.HANG = 1
 GROUP BY CLB.TENCLB, T.TENTINH
-
-
 SELECT * 
 FROM TOP1CLB
+-- DROP VIEW TOP1CLB
