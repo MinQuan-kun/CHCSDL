@@ -31,13 +31,10 @@ FOR INSERT, UPDATE
 AS
 BEGIN
     SET NOCOUNT ON;
-
     DECLARE @CT_ao INT, @CT_MACLB INT;
-
     -- Lấy số áo và mã câu lạc bộ của cầu thủ từ bảng inserted
     SELECT @CT_ao = SO, @CT_MACLB = MACLB
     FROM inserted;
-
     -- Kiểm tra nếu đã tồn tại cầu thủ với cùng số áo trong cùng một câu lạc bộ
     IF EXISTS (
         SELECT 1
@@ -78,7 +75,6 @@ AS
 BEGIN
 	SET NOCOUNT ON
 	DECLARE @CT_MACLB INT, @SoLuongNuocNgoai INT;
-
     -- Lấy mã câu lạc bộ từ bản ghi được thêm hoặc cập nhật
     SELECT @CT_MACLB = MACLB 
     FROM inserted;
@@ -87,7 +83,6 @@ BEGIN
         FROM CAUTHU
         WHERE MACLB = @CT_MACLB AND MAQG <> 'VN'
     );
-
 	IF @SoLuongNuocNgoai >8
 	BEGIN
 		RAISERROR(N'Số lượng cầu thủ nước ngoài ở câu lạc bộ này chỉ được phép có tối đa là 8', 16, 1)
@@ -115,7 +110,6 @@ BEGIN
 	WHERE TENQG = @QG
 	)
 	BEGIN
-		
 		RAISERROR(N'Quốc gia này đã tồn tại', 16, 1);
 		ROLLBACK TRANSACTION
 	END

@@ -11,10 +11,8 @@ BEGIN
 	WHERE BXH.VONG = @vong 
 	AND BXH.NAM = @nam
 END
-
 EXEC TRANHOA 3, 2009
-
-DROP PROC TRANHOA
+--DROP PROC TRANHOA
 
 -- 43. Viết store procedure tương ứng với các câu ở phần View. Sau đó cho thực hiện để kiểm
 -- tra kết quả.
@@ -39,7 +37,6 @@ BEGIN
 	AND QG.TENQG LIKE N'Bra-xin' 
 	AND CLB.MACLB = @CLB_ID
 END
-
 EXEC BRAXIN SDN
 --DROP PROC BRAXIN
 
@@ -86,7 +83,6 @@ SELECT HLV.MAHLV,
 	JOIN QUOCGIA QG ON QG.MAQG = HLV.MAQG
 	WHERE QG.TENQG = @VN
 END
-
 EXEC HLVVN N'Việt Nam'
 --DROP PROC HLVVN
 

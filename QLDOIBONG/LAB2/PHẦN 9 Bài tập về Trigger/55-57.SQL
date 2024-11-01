@@ -206,12 +206,10 @@ BEGIN
     DECLARE @Mact INT; 
     DECLARE @HotenCu NVARCHAR(100);
     DECLARE @HotenMoi NVARCHAR(100);
-    
     DECLARE cur CURSOR FOR 
     SELECT d.MACT, d.HOTEN, i.HOTEN
     FROM deleted d
     JOIN inserted i ON d.MACT = i.MACT;  -- Kết nối với bảng inserted
-
     OPEN cur;
     FETCH NEXT FROM cur INTO @Mact, @HotenCu, @HotenMoi;
 
@@ -222,7 +220,6 @@ BEGIN
                      N', tên mới: ', @HotenMoi);
         FETCH NEXT FROM cur INTO @Mact, @HotenCu, @HotenMoi;
     END
-
     CLOSE cur;
     DEALLOCATE cur;
 END;

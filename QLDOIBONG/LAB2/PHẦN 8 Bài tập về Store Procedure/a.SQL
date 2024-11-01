@@ -24,7 +24,6 @@ BEGIN
     --CONCAT để nối chuỗi trong SQL Server. 
     --Hàm CONCAT tự động chuyển đổi các giá trị không phải chuỗi sang kiểu chuỗi, giúp mã gọn gàng hơn.
 END
-
 EXEC TONG 1, 2
 --DROP PROC TONG
 
@@ -39,7 +38,6 @@ BEGIN
     SET @tong = @s1 + @s2
     PRINT (@tong)
 END
-
 EXEC XUATTONG 1, 2
 --DROP PROC XUATTONG
 
@@ -59,7 +57,6 @@ BEGIN
     END
     PRINT CONCAT(N'Số lớn nhất: ', @Max)
 END
-
 EXEC SOLONNHAT 3, 2
 EXEC SOLONNHAT 1, 2
 --DROP PROC SOLONNHAT
@@ -83,7 +80,6 @@ BEGIN
     PRINT CONCAT(N'Số lớn nhất: ', @Max)
     PRINT CONCAT(N'Số bé nhất: ', @Min)
 END
-
 EXEC MINMAX 1, 2
 EXEC MINMAX 27, 2
 --DROP PROC MINMAX
@@ -102,7 +98,6 @@ BEGIN
         SET @temp += 1
     END
 END
-
 EXEC INN 5
 EXEC INN 50
 --DROP PROC INN

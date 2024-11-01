@@ -52,4 +52,3 @@ FROM
     RankedClubs
 WHERE 
     Rank = 1;
-
