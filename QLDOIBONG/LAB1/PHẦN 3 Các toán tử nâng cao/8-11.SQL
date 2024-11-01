@@ -1,0 +1,51 @@
+--8. Cho biết tên huấn luyện viên đang nắm giữ một vị trí trong một câu lạc bộ mà chưa có số điện thoại.
+SELECT 
+    HLV.TENHLV
+FROM 
+    HUANLUYENVIEN HLV
+    JOIN HLV_CLB HLV_CLB ON HLV.MAHLV = HLV_CLB.MAHLV
+WHERE 
+    HLV.DIENTHOAI IS NULL;
+
+--9. Liệt kê các huấn luyện viên thuộc quốc gia Việt Nam chưa làm công tác huấn luyện tại bất kỳ một câu lạc bộ nào.
+SELECT 
+    HLV.TENHLV
+FROM 
+    HUANLUYENVIEN HLV
+LEFT JOIN 
+    HLV_CLB HLV_CLB ON HLV.MAHLV = HLV_CLB.MAHLV
+WHERE 
+    HLV.MAQG = 'VN' 
+    AND HLV_CLB.MAHLV IS NULL;
+
+--10. Liệt kê các cầu thủ đang thi đấu trong các câu lạc bộ có thứ hạng ở vòng 3 năm 2009 lớn hơn 6 hoặc nhỏ hơn 3.
+SELECT 
+    CAUTHU.HOTEN, 
+    CAUTHU.VITRI, 
+    CLB.TENCLB, 
+    BX.HANG
+FROM 
+    CAUTHU 
+    JOIN CAULACBO CLB ON CAUTHU.MACLB = CLB.MACLB
+    JOIN BANGXH BX ON CLB.MACLB = BX.MACLB
+WHERE 
+    BX.VONG = 3 
+    AND BX.NAM = 2009 
+    AND (BX.HANG > 6 OR BX.HANG < 3);
+
+--11. Cho biết danh sách các trận đấu (NGAYTD, TENSAN, TENCLB1, TENCLB2, KETQUA) của câu lạc bộ CLB đang xếp hạng cao nhất tính đến hết vòng 3 năm 2009.
+DECLARE @TopClb VARCHAR(5)
+
+SET @TopClb = (
+	SELECT TOP 1 MACLB FROM BANGXH
+	WHERE NAM = 2009 AND VONG = 3
+	ORDER BY HANG ASC
+)
+
+SELECT TRANDAU.NGAYTD, SANVD.TENSAN, CLB1.TENCLB AS TENCLB1, CLB2.TENCLB AS TENCLB2, TRANDAU.KETQUA FROM TRANDAU
+JOIN CAULACBO AS CLB1 ON TRANDAU.MACLB1 = CLB1.MACLB
+JOIN CAULACBO AS CLB2 ON TRANDAU.MACLB2 = CLB2.MACLB
+JOIN SANVD ON TRANDAU.MASAN = SANVD.MASAN
+
+WHERE TRANDAU.MACLB1 = @TopClb OR TRANDAU.MACLB2 = @TopClb AND TRANDAU.NAM = 2009 AND TRANDAU.VONG <= 3
+
