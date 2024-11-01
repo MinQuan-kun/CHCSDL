@@ -7,7 +7,6 @@ AS
 BEGIN 
     Print(N'Xin chào ' + @ten)
 END
-
 EXEC XINCHAO  N'Minh Quân'
 --DROP PROC XINCHAO
 
@@ -133,7 +132,5 @@ BEGIN
     PRINT CONCAT(N'Tổng các số chẵn: ', @tong)
     PRINT CONCAT(N'Số lương số chẵn: ', @count)
 END
-
 EXEC INTONGSOLUONGCHAN 4
-
 --DROP PROC INTONGSOLUONGCHAN
