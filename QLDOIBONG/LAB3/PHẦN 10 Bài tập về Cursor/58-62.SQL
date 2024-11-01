@@ -254,7 +254,7 @@ BEGIN
 
         IF EXISTS (SELECT 1 FROM BANGXH WHERE MACLB = @MACLB AND NAM = @NAM AND VONG = @VONG)
         BEGIN
-=
+        
             UPDATE BANGXH
             SET 
                 DIEM = @TotalPoints, 
