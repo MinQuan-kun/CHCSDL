@@ -49,8 +49,8 @@ INSERT INTO STICKER(TenSticker,NamSX,MaCD,LanSuDung,MaLoai,GiaBan) VALUES
 
 --Câu 1
 
-Tổng kích thước của mẫu tập tin STICKER bao gồm cả header là:
-8 + 40 + 10 + 8 + 8 + 8 + 8 + 12: 102 Bytes
+- Tổng kích thước của mẫu tập tin STICKER bao gồm cả header là:
+8 + 40 + 10 + 8 + 8 + 8 + 8 + 12 = 102 Bytes
 
 -Kích thước khả dụng cho dữ liệu trong một block:
 1024 - 24 = 1000 bytes
@@ -66,7 +66,7 @@ Số block cần thiết để lữu trữ 1000 bản ghi:
 Kích thước file tối thiểu chứa 1000 bản ghi 
 112 * 1024 = 114,688 bytes
 
---Câu 2
+-- Câu 2
 
 *Vẽ cây cơ bản (không bắt buộc vẽ trong đề thi)
 
